@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-2.1.4.min.js"></script>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Perfect Group of Companies   </title>
+
+    <link rel="stylesheet" href="/home.css"/>
+    <link rel="stylesheet" href="/tab.css"/>
+    <link rel="stylesheet" href="/Product_tab.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+
+     <link rel="stylesheet" href="/specificP.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!--Forex head 1 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+	<style type="text/css" >
+		div.main{
+		width:300px;
+    height:300px;
+    margin: auto;
+    border: 3px solid black;
+	background-image: url("fox2.jpg");
+	margin-top:200px;
+	
+		
+		}
+		div.allone
+		{
+		width:30%;
+		}
+		div.test{
+		width:10px
+		margin-left:10px;
+		}
+		div.testUSD
+		{
+	margin-left:10px;
+		padding-top:10px;
+		}
+		div.testCAD{
+		margin-top:10px;
+		margin-left:90px;
+		background-color:"gray";
+				padding-top:10px;
+}
+div.drop{
+padding-top:10px;
+margin-left:10px;
+}
+div.but{
+		background-color:"gray";
+				padding-top:10px;
+				margin:auto;
+				margin-left:10px;
+}
+div.box{
+margin-left:10px;
+margin-top:20px;
+
+}
+.mytext
+{
+width:50px;}
+
+		
+		</style>
+		
+ <script type="text/javascript">
+            
+            $.ajax({
+  dataType: "json",
+  url: 'https://api.fixer.io/latest',
+  data: {base: 'INR'},
+  success: function(data){
+      $.each(data.rates, function(index, item) {
+        var div_data = "<option value=" + index + ">" + index + "</option>";
+        $(div_data).appendTo('#dp');
+
+
+                });
+      
+  }
+  
+  
+  
+  
+});
+
+    $(document).ready(function() {
+       // alert(1);
+               $("#click-submit").click(function(){
+                   var val = $('#test').val();
+                   var currency = $('#dp').val();
+//                   alert(val);
+                               $.ajax({
+  dataType: "json",
+  url: 'https://api.fixer.io/latest',
+  data: {base: currency},
+  success: function(data){
+ //     alert(val * data.rates.INR);
+      $('#test1').val(val * data.rates.INR);
+      
+  }
+});
+
+
+});
+    });
+	
+
+	
+	// code for currencu display rate
+	
+	$(document).ready(function() {
+        //alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'https://api.fixer.io/latest',
+  data: {base: 'USD'},
+  success: function(data){
+ //     alert(data);
+//      alert(data.rates.INR);
+      $('#test').val(data.rates.INR);
+      
+  }
+});
+    });
+       // alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'https://api.fixer.io/latest',
+  data: {base: 'CAD'},
+  success: function(data){
+  //    alert(data);
+  //    alert(data.rates.INR);
+      $('#test1').val(data.rates.INR);
+      
+  }
+});
+//display pls
+$(document).ready(function() {
+        //alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'https://api.fixer.io/latest',
+  data: {base: 'USD'},
+  success: function(data){
+ //     alert(data);
+//      alert(data.rates.INR);
+      $('#usd').val(data.rates.INR);
+      
+  }
+});
+    });
+$(document).ready(function() {
+        //alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'https://api.fixer.io/latest',
+  data: {base: 'EUR'},
+  success: function(data){
+ //     alert(data);
+//      alert(data.rates.INR);
+      $('#euro').val(data.rates.INR);
+      
+  }
+});
+    });
+    
+    </script>
+    
+    
+<!-- End of Forex 1 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+</head>
+
+
+<body> 
+
+<!------ Header------>
+<header>
+        <a href="/" id="logo"><img src="/lg.png"></a>
+        <nav>
+        <a href="#" id="menu-icon"></a>
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/company">Partners</a></li>
+            </ul>
+        </nav>
+    </header>
+<!------end Header------>
+<!------New------>
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= tool.name %></div>
+    <div class="ui top attached ">
+        <div class="item">
+           
+            <!--<script type="text/jscript" src="/shoppingCart.js"></script>-->
+            <a href="/shoppingCart/<%=tool._id %>"> </a>
+
+        </a>
+        
+           <img class="ui centered rounded image " src="/<%= tool.image %>">
+        </div>
+        <div class="description">
+            <p><b>Estimate price:</b><br>
+           $ &nbsp; <%= tool.price %></p>
+            <p><b>Description:</b><br>
+            <%= tool.description %></p>
+            <p><b>Category:</b><br>
+            <%= tool.category %></p>
+            <div class="comp_logo"><img src="/<%= tool.company_logo %>"></div><br>
+            <a style="font-weight:bold; text-decoration:underline" href="/Company/<%=tool._id %>">
+            <%= tool.company_name %> </a>
+    
+        <input type="button" class="iu" value="Add to cart" onclick="AddtoCart()"/>
+        <div><input type="button" value="View Cart" id="myBtn"/></div>
+        <div class = "space"></div>
+        
+        </div>
+  <div class = "space"></div>
+      
+      
+<!------end New------>
+     
+
+  
+            
+<!--<script type="text/jscript" src="/shoppingCart.js"></script>                                 -->
+
+<script type = "text/javascript" >
+    //create array that will hold all ordered products
+    var shoppingCart = [];
+
+    //this function manipulates DOM and displays content of our shopping cart
+    function displayShoppingCart(){
+        loadCart();
+        var orderedProductsTblBody=document.getElementById("orderedProductsTblBody");
+        //ensure we delete all previously added rows from ordered products table
+        while(orderedProductsTblBody.rows.length>0) {
+            orderedProductsTblBody.deleteRow(0);
+        }
+
+        //variable to hold total price of shopping cart
+        var cart_total_price=0;
+        //iterate over array of objects
+        for(var product in shoppingCart){
+            //add new row      
+            var row=orderedProductsTblBody.insertRow();
+            //create three cells for product properties 
+            var cellName = row.insertCell(0);
+            var cellDescription = row.insertCell(1);
+            var cellPrice = row.insertCell(2);
+            cellPrice.align="right";
+            //fill cells with values from current product object of our array
+            // cellName.innerHTML = shoppingCart[product].'<%= tool.name %>';
+            // cellDescription.innerHTML = shoppingCart[product].'<%= tool.description %>';
+            // cellPrice.innerHTML = shoppingCart[product].<%= tool.price %>;
+            // cart_total_price+=shoppingCart[product].<%= tool.price %>;
+            
+            console.log(shoppingCart[product]);
+            
+            cellName.innerHTML = shoppingCart[product].name;
+            cellDescription.innerHTML = shoppingCart[product].description;
+            cellPrice.innerHTML = shoppingCart[product].price ;
+            cart_total_price+=shoppingCart[product].price;
+            
+           
+             //cart_total_price+=parseInt((shoppingCart[product].<%= tool.price %>),10);
+            //  cart_total_price+=Number(cellPrice);
+
+        }
+        //fill total cost of our shopping cart 
+        document.getElementById("cart_total").innerHTML=cart_total_price.toFixed(2);
+    }
+
+
+    function AddtoCart(){
+       //Below we create JavaScript Object that will hold three properties: Name,Description and Price
+       var singleProduct = {};
+       //Fill the product object with data
+       
+       singleProduct.name= '<%= tool.name %>' ;
+       singleProduct.description = '<%= tool.description %>';
+       singleProduct.price = <%= tool.price %>;
+       
+       //Add newly created product to our shopping cart 
+     // check for errors  
+       console.log(singleProduct);
+       
+       shoppingCart.push(singleProduct);
+       //save cart
+       saveCart();
+       //call display function to show on screen
+       displayShoppingCart();
+       
+
+    }  
+    
+function clearCart(){
+    shoppingCart= [];
+    saveCart();
+    displayShoppingCart();
+}
+//funtion to save cart
+function saveCart (){
+    console.log('Saving shopping cart')
+    console.log(shoppingCart)
+    sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+}
+// function to load the saved cart    
+function loadCart(){
+    console.log('Loading shopping cart');
+    shoppingCart= JSON.parse(sessionStorage.getItem("shoppingCart"));
+    console.log('Loaded')
+    console.log(shoppingCart)
+}
+
+// Get the modal
+var modal = document.getElementById('myModal_content');
+
+// Get the button that opens the modal
+var btn = document.getElementById("");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+
+
+</script>
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.clean  {
+    color: #aaaaaa;
+    float: bottom;
+    font-size: 28px;
+    font-weight: bold;
+}
+.table {
+    font-family: "sansSerif";
+    font-size: 14px;
+    border: 2px ;
+    text-align: left;
+    padding: 15px;
+    
+}
+.tbhearders {
+    background-color: #82b9d6;
+    
+
+}
+.tbfooter {
+    background-color:#edeef9;
+}
+
+</style>
+<!--</head>
+<body>-->
+
+
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <td valign="top">
+            <table class="table" cellpadding="4" cellspacing="4" border="1" id="orderedProductsTbl">
+                <thead class="tbhearders">
+                    <tr>
+                        
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            Price
+                        </td>
+                        
+                    </tr>
+                </thead>
+                <tbody id="orderedProductsTblBody">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="tbfooter" colspan="3" align="right" id="cart_total">
+            
+
+                        </td>
+                    
+                    </tr>
+                </tfoot>
+            </table>
+        </td>
+        <div class = "space"></div>
+       <a class="link"onclick="clearCart()">Clear Cart</a> 
+        <div class = "space"></div>
+       <!--<div> <input type="button" id="PCbutn" value= "Proceed to Checkout"/></div>-->
+              <div> <a href="/Checkout" id="PCbutn" value= "Proceed to Checkout"/>Proceed to Checkout</div>
+
+    <!--   <li><a href="/server">Products</a></li> -->
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+    displayShoppingCart();
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+
+}
+
+
+</script>
+
+
+<!------review------>
+
+      <div>
+        
+         <button class="ui floated basic blue button">Costumer reviews</button>
+         
+         <div class="panel">
+             <p> <b>Write a review </b></p>
+                <form>
+                <textarea id="words" rows="5" cols="45">You opinion</textarea>
+                    <br>
+                <input class="enter" style="width:15%" type="button" onclick="getwords()" value="enter" /> <br>
+                    <p id="para"></p>
+                </form>
+                
+            <p><b>Awesome product</b> by: Cicero</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p> 
+            <p><b>Disapointing</b> by: Italy</p>
+            <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.    </p>
+            
+            </div>
+             <div class="space"></div>
+             <a> <href</a>
+            <button class="ui floated basic blue button" onclick="visitPage()">Forex</button>
+            <script>
+    function visitPage(){
+        window.location='/views/forex_calculated.html';
+    }
+</script>
+<button onclick="visitPage();">Visit Page Now</button>
+            <div class="panel">
+             <p> 
+             
+<!-- Forex body  2 Part@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+        
+	
+
+	<!--    wriiten rates display    -->
+	<div class="main">
+	<p>   <b> Forex Rates: </b></p>
+	<div class="box"> 
+	<input type="submit"  value="1 USD"/> &nbsp; &nbsp; &nbsp;   <input type="submit" id="usd" />
+	<p><input type="submit"  value="1 EURO"/> &nbsp; &nbsp; &nbsp;   <input type="submit" id="euro" /> </p> </div>
+	<div>
+	
+
+	<div class="testUSD"> <input type="text" id="test" class="mytext"/> &nbsp; <select id="dp" ></select> &nbsp;  <input type="text" id="test1" class="mytext"/> <b> INR </b></div>
+
+        <div class="testCAD">
+	
+		<input type="submit" id="click-submit" value="submit"/>  &nbsp;
+ 
+		</div>
+
+</div>
+</div>
+<!-- End of Forex 2 Part@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+             </p>
+              
+            </div>
+        <script>
+                var acc = document.getElementsByClassName("ui floated basic blue button");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                     this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                            }
+                           }
+                        }
+            </script>
+        <script type="text/javascript">
+            function getwords() {
+             text = words.value;
+              document.getElementById("para").innerHTML += '<p>'+text
+              document.getElementById("words").value = "enter"
+                    }
+        </script>
+      </div>
+    </div>
+</div>
+
+<!------end review------>
+
+ <!------ footer------>
+
+    <footer>
+    <section>
+        <h3><b>Perfect Forgings</b></h3>
+        <p><b>+91 161 2510441</b><br><br>
+        Road Opp. Dhandari Rly. Station<br>
+        Dhandari Kalan, Ludhiana-141014<br>
+               Punjab, INDIA<br>
+        info@perfectforgings.com</p>
+        </section>
+    <section>
+        <img src="/lg.png">
+        </section>
+    <section>
+        <h3>Connect With Us!</h3>
+        <ul class="social">
+            <li><a href="#"><img src="/facebook.png"></a></li>
+            <li><a href="#"><img src="/twitter%20copy.png"></a></li>
+            <li><a href="#"><img src="/linkedin%20copy.png"></a></li>
+        </ul>
+            </section>    
+    </footer>
+    <footer class="second">
+        <p>@Copyright - PerfectForgings 2017</p>
+
+    </footer>
+ <!------end footer------>
+
+        
+        
+        
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-2.1.4.min.js"></script>
+		<style >
+		div.main{
+		width:300px;
+    height:300px;
+    margin: auto;
+    border: 3px solid black;
+	background-image: url("fox2.jpg");
+	margin-top:200px;
+	
+		
+		}
+		div.allone
+		{
+		width:30%;
+		}
+		div.test{
+		width:10px
+		margin-left:10px;
+		}
+		div.testUSD
+		{
+	margin-left:10px;
+		padding-top:10px;
+		}
+		div.testCAD{
+		margin-top:10px;
+		margin-left:90px;
+		background-color:"gray";
+				padding-top:10px;
+}
+div.drop{
+padding-top:10px;
+margin-left:10px;
+}
+div.but{
+		background-color:"gray";
+				padding-top:10px;
+				margin:auto;
+				margin-left:10px;
+}
+div.box{
+margin-left:10px;
+margin-top:20px;
+
+}
+.mytext
+{
+width:50px;}
+
+		
+		</style>
+		
+<script>
+            $.ajax({
+  dataType: "json",
+  url: 'http://api.fixer.io/latest',
+  data: {base: 'INR'},
+  success: function(data){
+      $.each(data.rates, function(index, item) {
+        var div_data = "<option value=" + index + ">" + index + "</option>";
+        $(div_data).appendTo('#dp');
+
+
+                });
+      
+  }
+  
+  
+  
+  
+});
+    $(document).ready(function() {
+       // alert(1);
+               $("#click-submit").click(function(){
+                   var val = $('#test').val();
+                   var currency = $('#dp').val();
+//                   alert(val);
+                               $.ajax({
+  dataType: "json",
+  url: 'http://api.fixer.io/latest',
+  data: {base: currency},
+  success: function(data){
+ //     alert(val * data.rates.INR);
+      $('#test1').val(val * data.rates.INR);
+      
+  }
+});
+
+
+});
+    });
+	
+
+	
+	// code for currencu display rate
+	
+	$(document).ready(function() {
+        //alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'http://api.fixer.io/latest',
+  data: {base: 'USD'},
+  success: function(data){
+ //     alert(data);
+//      alert(data.rates.INR);
+      $('#test').val(data.rates.INR);
+      
+  }
+});
+    });
+       // alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'http://api.fixer.io/latest',
+  data: {base: 'CAD'},
+  success: function(data){
+  //    alert(data);
+  //    alert(data.rates.INR);
+      $('#test1').val(data.rates.INR);
+      
+  }
+});
+//display pls
+$(document).ready(function() {
+        //alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'http://api.fixer.io/latest',
+  data: {base: 'USD'},
+  success: function(data){
+ //     alert(data);
+//      alert(data.rates.INR);
+      $('#usd').val(data.rates.INR);
+      
+  }
+});
+    });
+$(document).ready(function() {
+        //alert(1);
+        $.ajax({
+  dataType: "json",
+  url: 'http://api.fixer.io/latest',
+  data: {base: 'EUR'},
+  success: function(data){
+ //     alert(data);
+//      alert(data.rates.INR);
+      $('#euro').val(data.rates.INR);
+      
+  }
+});
+    });
+    
+    </script>
+    </head>
+    <body>
+	
+
+	<!--    wriiten rates display    -->
+	<div class="main">
+	<p>   <b> Forex Rates: </b></p>
+	<div class="box"> 
+	<input type="submit"  value="1 USD"/> &nbsp; &nbsp; &nbsp;   <input type="submit" id="usd" />
+	<p><input type="submit"  value="1 EURO"/> &nbsp; &nbsp; &nbsp;   <input type="submit" id="euro" /> </p> </div>
+	<div>
+	
+	
+	<div class="testUSD"> <input type="text" id="test" class="mytext"/> &nbsp; <select id="dp" ></select> &nbsp;  <input type="text" id="test1" class="mytext"/> <b> INR </b></div>
+ 
+	
+	
+        <div class="testCAD">
+		
+ 
+        	
+		<input type="submit" id="click-submit" value="submit"/>  &nbsp;
+        
+		
+		
+			
+
+
+		
+		</div>
+<!--        -->
+        
+
+	
+
+</div>
+</div>
+    </body>
+</html>

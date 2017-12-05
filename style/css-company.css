@@ -1,0 +1,184 @@
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #494949;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #dcebf2;
+    color: black;
+}
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 90%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+    .body {
+    background-image: url(images/bg3.png);
+    /*background-image: url(bg10.jpg);*/
+
+        font-family: sans-serif;
+    font-size:13px;
+}
+
+ul.rig {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+}
+ul.rig li {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.rig li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+ul.rig li h3 {
+	margin: 0 0 5px;
+}
+ul.rig li p {
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #999;
+}
+/* class for 2 columns */
+ul.rig.columns-2 li {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.rig.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 li {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.rig {
+		margin-left: 0;
+	}
+	ul.rig li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+}
+
+
+/* .container Added by Maria for the Simple product page */
+.container{
+
+    width: 60%;
+
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-right:5%;
+    padding-bottom: 5%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    background-color: #999999;
+    overflow: scoll;
+    background: rgba(238, 238, 238, 0.8);
+
+
+}
+
+/* .content-container Added by Maria for the Simple product page */
+.content-container {
+
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-top: 22%;
+    opacity: 1;
+}
+
+/* reviewcontainer Added by Maria for the Simple product page */
+#reviewcontainer{
+
+    width: 60%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-right:5%;
+    padding-bottom: 5%;
+    margin:auto;
+    margin-bottom: 15%;
+    margin-top:1%;
+    background-color: #999999;
+    overflow: scoll;
+    background: rgba(238, 238, 238, 0.8);
+    font-family: sans-serif;
+    font-size: 14px;
+
+}

@@ -1,0 +1,19 @@
+ <% tools.forEach(function(tool){ %>
+              <div class="item">
+                  <div class="image">
+                    <img src="<%= tool.image %>">
+                  </div>
+                  <div class="content">
+                   <a class="header" href="/products/<%=tool._id %>"><%= tool.name %></a>
+                   <div class="description">
+                     <p>$ &nbsp;<%= tool.price %></p> 
+                   </div>
+                    <div class="extra">
+                      <a class="ui floated basic blue button" href="/products/<%=tool._id %>">
+                          More ...
+                          <i class="right chevron icon"></i>
+                      </a>
+                    </div>
+                   </div>
+              </div>
+            <% }) %>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-2.1.4.min.js"></script>
+        	<script src="canvasjs.min.js"></script>
+<script src="jquery.canvasjs.min.js"></script>
+
+<script type="text/javascript">
+
+            
+    $(document).ready(function() {
+        $.ajax({
+        dataType: "json",
+        url: 'https://api.fixer.io/latest',
+        data: {base: 'INR'},
+        success: function(data){
+            $('#cur1').val(parseFloat(data.rates.AUD));
+                  $('#cur2').val(parseFloat(data.rates.CAD));
+                  $('#cur3').val(parseFloat(data.rates.CHF));
+                  $('#cur4').val(parseFloat(data.rates.CNY));
+                  $('#cur5').val(parseFloat(data.rates.CZK));
+                  $('#cur6').val(parseFloat(data.rates.DKK));
+            $.each(data.rates, function(index, item) {
+              var div_data = "<option value=" + index + ">" + index + "</option>";
+              $(div_data).appendTo('#dp');
+
+
+                      });
+
+            }
+        });
+
+    function createPareto(chart){
+        var dps = [];
+        var yValue, yTotal = 0, yPercent = 0;
+
+        for(var i = 0; i < chart.data[0].dataPoints.length; i++)
+        yTotal += chart.data[0].dataPoints[i].y;
+
+        for(var i = 0; i < chart.data[0].dataPoints.length; i++){
+        yValue = chart.data[0].dataPoints[i].y;
+        yPercent += (yValue / yTotal * 100);
+        dps.push({label: chart.data[0].dataPoints[i].label, y: yPercent});
+        }
+        chart.addTo("data",{type:"line", yValueFormatString: "#.####", dataPoints: dps});
+        chart.data[1].set("axisYType", "secondary");
+        chart.axisY[0].set("maximum", yTotal);
+        chart.axisY2[0].set("maximum", 100);
+    }
+    
+       
+        
+    $("#click-submit").click(function(){
+        var val = $('#test').val();
+        var currency = $('#dp').val();
+        $.ajax({
+            dataType: "json",
+            url: 'https://api.fixer.io/latest',
+            data: {base: currency},
+            success: function(data){
+                  $('#test1').val(val * data.rates.INR);
+                   var chart = new CanvasJS.Chart("chartContainer",{
+            title:{
+                text: "FOREX RATES ON 2000"
+            },
+            axisY: {
+		title: "Currency Value",                   
+            },
+            axisY2: {
+                title: "Percent",
+            },
+            data: [
+            {
+            type: "column",
+            dataPoints: [
+            { label: "AUD", y: parseFloat($('#cur1').val()) },
+            { label: "CAD", y: parseFloat($('#cur2').val()) },
+            { label: "CHF", y: parseFloat($('#cur3').val()) },
+            { label: "CNY", y: parseFloat($('#cur4').val()) },
+            { label: "CZK", y: parseFloat($('#cur5').val()) },                      
+            { label: "DKK", y: parseFloat($('#cur6').val()) },
+            ]
+            }
+            ]
+            
+            
+        });
+        
+                  chart.render();
+                  createPareto(chart); 
+                  
+    
+  }
+});
+
+});
+    });
+
+    
+    </script>
+    
+    
+    </head>
+    <body>
+        <div><input type="text" id="test"/>
+            <input type="hidden"  id="cur1"/>
+<input type="hidden" id="cur2"/>
+<input type="hidden" id="cur3"/>
+<input type="hidden" id="cur4"/>
+<input type="hidden" id="cur5"/>
+<input type="hidden" id="cur6"/></div>
+<!--        -->
+        <select id="dp" >
+        </select>
+<input type="submit" id="click-submit" value="submit"/>
+<div><p>This is equivalent to  = </p><input type="text" id="test1"/>INR</div>
+	<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+
+    </body>
+</html>

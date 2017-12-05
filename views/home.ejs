@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Perfect Group of Companies   </title>
+
+    <link rel="stylesheet" href="/home.css"/>
+    <link rel="stylesheet" href="/home_slider.css"/>
+    <link rel="stylesheet" href="/home_login.css"/>
+    <link rel="stylesheet" href="/tab.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+
+<!--Forex Chart 1 head @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--
+<style>
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    /*width: 160px;*/
+    width: 100%;
+
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
+-->
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+<!-- End of Forex Chart 1 head @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+
+</head>
+
+<body>
+<!------Header------>
+  
+    <header>
+        <a href="/" id="logo"><img src="/lg.png"></a>
+        <nav>
+        <a href="#" id="menu-icon"></a>
+            <ul>
+            <li><a href="/" class="current">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/company">Partners</a></li>
+            <!--<li><a href="/chat">Chat</a></li>-->
+          
+           
+
+            </ul>
+        </nav>
+        
+<!------Login-------->
+<!--<div id="Login">-->
+<!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>-->
+<!--        </div>-->
+
+
+<!--<div id="id01" class="modal">-->
+
+<!--  <form class="modal-content animate" action="/action_page.php">-->
+<!--    <div class="imgcontainer">-->
+<!--      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>-->
+
+<!--    </div>-->
+
+<!--    <div class="container">-->
+<!--      <label><b>Username</b></label>-->
+<!--      <input type="text" placeholder="Enter Username" name="uname" required>-->
+
+<!--      <label><b>Password</b></label>-->
+<!--      <input type="password" placeholder="Enter Password" name="psw" required>-->
+
+<!--      <button type="submit">Login</button>-->
+<!--      <input type="checkbox" checked="checked"> Remember me-->
+<!--    </div>-->
+
+<!--    <div class="container" style="background-color:#f1f1f1">-->
+<!--      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>-->
+<!--      <span class="psw">Forgot <a href="#">password?</a></span>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</div>-->
+<!-----End Login------->
+
+ <!-----Signup----->
+<!--<div id="Signup">-->
+<!--        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</button>-->
+<!--        </div>-->
+<!-- The Modal (contains the Sign Up form) -->
+<!--<div id="id02" class="modal">-->
+<!--  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>-->
+<!--  <form class="modal-content animate" action="/action_page.php">-->
+<!--    <div class="container">-->
+<!--      <label><b>Email</b></label>-->
+<!--      <input type="text" placeholder="Enter Email" name="email" required>-->
+
+<!--      <label><b>Password</b></label>-->
+<!--      <input type="password" placeholder="Enter Password" name="psw" required>-->
+
+<!--      <label><b>Repeat Password</b></label>-->
+<!--      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>-->
+<!--      <input type="checkbox" checked="checked"> Remember me-->
+<!--      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>-->
+
+<!--      <div class="clearfix">-->
+<!--        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>-->
+<!--        <button type="submit" class="signupbtn">Sign Up</button>-->
+<!--        <button type="button" class="signupbtn" id="myBtn">Company Sign Up</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</div>-->
+<!-----End sigunp---->
+
+<!-- The Modal -->
+<!--<div id="myModal" class="modal">-->
+<!-- <link rel="stylesheet" href="/css-company.css">-->
+
+
+<!-- Modal content -->
+<!--  <div class="modal-content">-->
+<!--    <span class="close">&times;</span>-->
+<!--    <h4 align="center">Company sign-up form</h4>-->
+<!--	 <form action="">-->
+<!--    <label for="companyname">Company Name</label>-->
+<!--    <input type="text" id="fname" name="firstname" placeholder="Company Name..">-->
+
+<!--    <label for="lname">Description</label>-->
+<!--    <input type="text" id="lname" name="lastname" placeholder="short description of your company..">-->
+
+<!--    <label for="country">Country</label>-->
+<!--    <select id="country" name="country">-->
+<!--	<option value="usa">USA</option>-->
+<!--	<option value="canada">Canada</option>-->
+<!--    <option value="india">India</option>-->
+<!--    </select>-->
+
+<!--    <label for="subject">Company Profile</label>-->
+<!--    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>-->
+
+<!--     <label for="category">Category</label>-->
+<!--    <select id="category" name="category" >-->
+<!--	<option value="handtool">Hand Tool</option>-->
+<!--	<option value="machinetool">Machine Tool</option>-->
+<!--    <option value="scafolding">Scafolding</option>-->
+<!--    <option type="TextBox" name="timebox" maxlength="5"/>-->
+<!--         </select>-->
+
+<!-- Continue action & create new Route for it -->
+
+<!--	<form action="">-->
+<!--	<input type="file" name="fileupload" value="fileupload" id="fileupload">-->
+<!--	<label for="fileupload"></label>-->
+<!--	<input type="submit" value="submit">-->
+<!--	</form>-->
+
+<!--    <input type="submit" value="Submit">-->
+<!--  </form>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<script type="text/jscript" src="/company-signup-popUp.js"></script>-->
+
+<!------Modal Company Signup End------->
+
+</header>
+<!------end Header---------->
+
+<!-----Carousel------
+    <div id="slider">
+	<input type="radio" id="button-1" name="controls" />
+	<input type="radio" id="button-2" name="controls" checked />
+	<input type="radio" id="button-3" name="controls" />
+	<input type="radio" id="button-4" name="controls" />
+	<input type="radio" id="button-5" name="controls" />
+	<label for="button-1" class="arrows" id="arrow-1">&#x25BB;</label>
+	<label for="button-2" class="arrows" id="arrow-2">&#x25BB;</label>
+	<label for="button-3" class="arrows" id="arrow-3">&#x25BB;</label>
+	<label for="button-4" class="arrows" id="arrow-4">&#x25BB;</label>
+	<label for="button-5" class="arrows" id="arrow-5">&#x25BB;</label>
+	<div id="slides">
+		<div class='tk-museo-sans'>
+			<span id="image-1">
+				<span class="info">
+				  			  new Hammers !! 
+				</span>
+			</span>
+			<span id="image-2">
+				<span class="info">
+				  What is special about tools ..
+				</span>
+			</span>
+			<span id="image-3">
+				<span class="info">
+				  				  some description .. New!!
+				</span>
+			</span>
+			<span id="image-4">
+				<span class="info">
+				  				  news about tools ..
+
+				</span>
+			</span>
+			<span id="image-5">
+				<span class="info">
+				  				  New !! ..
+
+				</span>
+			</span>
+		</div>
+	</div>
+</div>
+    -->
+    
+    
+
+
+
+<div class="slideshow-container">
+
+<div id="showFeatured" class="mySlides fade">
+  <div class="mySlidesaa">
+  <div class="numbertext">1 / 3</div>
+  <img src="/t9.jpg" class="abc" width="460" height="345">
+  <div class="text"></div>
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="/t4.jpg" class="abc" width="460" height="345">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="/t11.png" class="abc" width="300" height="345">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+//var html = new EJS({url: 'Forex_chart.ejs'}).render(data);
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<!------end Carousel------>
+    
+   <div class="wideDiv">
+<!-----division tab----->
+<script type="text/jscript" src="/Verticaltab.js"></script>
+    
+    <h3 id="tabH3" class="specialmargins">Featured Products</h3>
+    <div class="tab">
+  <button name="h" class="tablinks" onclick="openTab(event, 'HandTools')" id="defaultOpen"><a style="color:black" href="/#showFeatured">Hand Tools</a></button>
+  <!--<button class="tablinks active" onclick="openTab(event, 'HandTool')" id="defaultOpen">Hand Tools</button>-->
+ <button name="m" class="tablinks" onclick="openTab(event, 'MachineTools')"><a style="color:black" href="/MachineFeatured#showFeatured">Machine Tools</a></button>
+<button name="s" class="tablinks" onclick="openTab(event, 'ScaffoldingTools')"><a style="color:black" href="/ScaffoldingFeatured#showFeatured">Scaffolding Tools</a></button>
+</div>
+
+
+
+<!-----HandTool division tab----->
+
+<div id="HandTools" class="tabcontent" style="display:block">
+  <!--<h3>HandTools</h3>-->
+  <% tools.forEach(function(tool){ %>
+  <div class="responsive">
+  <div class="gallery">
+      <a target="_blank" href="/products/<%=tool._id %>">
+         <img src="/<%= tool.image %>" alt="Trolltunga Norway" width="400" height="200">
+      </a>
+      <a target="_blank" href="/products/<%=tool._id %>">
+      <div class="desc"><%= tool.name.substring(0,25) %>&nbsp; ...</div>
+       </a>
+  </div>
+</div>
+<% }) %>  
+</div>
+<!--</div>-->
+
+<!----- End HandTool division tab----->
+   
+   
+<!-----MachineTools division tab----->
+
+<div id="MachineTools" class="tabcontent">
+  <!--<h3>MachineTools</h3>-->
+  <% tools.forEach(function(tool){ %>
+  <div class="responsive">
+  <div class="gallery">
+      <a target="_blank" href="/products/<%=tool._id %>">
+         <img src="/<%= tool.image %>" alt="Trolltunga Norway" width="400" height="200">
+      </a>
+      <a target="_blank" href="/products/<%=tool._id %>">
+      <div class="desc"><%= tool.name.substring(0,20) %>&nbsp; ...</div>
+       </a>
+  </div>
+</div>
+<% }) %>  
+</div>
+<!----- End MachineTools division tab----->
+   
+   
+<!-----ScaffoldingTools division tab----->
+
+<div id="ScaffoldingTools" class="tabcontent">
+  <!--<h3>ScaffoldingTools</h3>-->
+  <% tools.forEach(function(tool){ %>
+  <div class="responsive">
+  <div class="gallery">
+      <a target="_blank" href="/products/<%=tool._id %>">
+         <img src="/<%= tool.image %>" alt="Trolltunga Norway" width="400" height="200">
+      </a>
+      <a target="_blank" href="/products/<%=tool._id %>">
+      <div class="desc"><%= tool.name.substring(0,30) %>&nbsp; ...</div>
+       </a>
+  </div>
+</div>
+<% }) %>  
+</div>
+<!----- End ScaffoldingTools division tab----->
+   
+   
+   
+<!--    <div class="responsive">-->
+<!--  <div class="gallery">-->
+<!--    <a target="_blank" href="/products">-->
+<!--      <img src="/ph2.jpg" alt="Trolltunga Norway" width="300" height="200">-->
+<!--    </a>-->
+<!--    <div class="desc">Add a description of the image here</div>-->
+<!--  </div>-->
+<!--</div>-->
+    
+<!--    <div class="responsive">-->
+<!--  <div class="gallery">-->
+<!--    <a target="_blank" href="/products">-->
+<!--      <img src="/ph3.jpg" alt="Trolltunga Norway" width="300" height="200">-->
+<!--    </a>-->
+<!--    <div class="desc">Add a description of the image here</div>-->
+<!--  </div>-->
+<!--</div>-->
+    
+<!--    <div class="responsive">-->
+<!--  <div class="gallery">-->
+<!--    <a target="_blank" href="/products">-->
+<!--      <img src="/ph4.jpg" alt="Trolltunga Norway" width="300" height="200">-->
+<!--    </a>-->
+<!--    <div class="desc">Add a description of the image here</div>-->
+<!--  </div>-->
+<!--</div>-->
+  
+<!----- End HandTool division tab----->
+    
+<!-----MachineTool division tab----->
+
+<!--<div id="MachineTools" class="tabcontent">-->
+<!--  <h3>Machine Tools</h3>-->
+<!--  <p>description of the Machine Tools.</p> -->
+<!--</div>-->
+<!-----End MachineTool division tab----->
+
+
+<!-----Scafoldings division tab----->
+<!--<div id="ScaffoldingTools" class="tabcontent">-->
+<!--  <h3>Scafoldings</h3>-->
+<!--  <p>description of the Scafoldings Tools.</p>-->
+<!--</div>-->
+<!-----End Scafoldings division tab----->
+
+
+<!-----division tab end-----> 
+</div>
+
+
+<!------Some icons------>
+  <div id="SecondGrid">
+    <section>
+    <!--    <button id="myBtn">Open Modal</button>  -->
+    <a class="sectionLinks" style="color:black" id="myBtn"><img src="/forex.png">
+        <h1> Current Forex Rates</h1></a>
+        <p></p>
+    </section>
+
+    <section>
+    <img src="/partners_icon.png">
+        <h1> Partner Companies</h1>
+        <p></p>
+    </section>
+
+    <section>
+    <img src="/certified.png">
+        <h1> Certified Products</h1>
+        <p></p>
+    </section>
+
+    </div>
+    
+    <div class="clear"></div>
+<!------Some icons Ends------>
+<!--
+
+
+<h2>Popup</h2>
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">        <script src="jquery-2.1.4.min.js"></script>
+        	<script src="canvasjs.min.js"></script>
+<script src="jquery.canvasjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script >
+
+            
+    $(document).ready(function() {
+        $.ajax({
+        dataType: "json",
+        url: 'https://api.fixer.io/latest',
+        data: {base: 'INR'},
+        success: function(data){
+            $('#cur1').val(parseFloat(data.rates.AUD));
+                  $('#cur2').val(parseFloat(data.rates.CAD));
+                  $('#cur3').val(parseFloat(data.rates.CHF));
+                  $('#cur4').val(parseFloat(data.rates.CNY));
+                  $('#cur5').val(parseFloat(data.rates.CZK));
+                  $('#cur6').val(parseFloat(data.rates.DKK));
+            $.each(data.rates, function(index, item) {
+              var div_data = "<option value=" + index + ">" + index + "</option>";
+              $(div_data).appendTo('#dp');
+
+
+                      });
+
+            }
+        });
+
+    function createPareto(chart){
+        var dps = [];
+        var yValue, yTotal = 0, yPercent = 0;
+
+        for(var i = 0; i < chart.data[0].dataPoints.length; i++)
+        yTotal += chart.data[0].dataPoints[i].y;
+
+        for(var i = 0; i < chart.data[0].dataPoints.length; i++){
+        yValue = chart.data[0].dataPoints[i].y;
+        yPercent += (yValue / yTotal * 100);
+        dps.push({label: chart.data[0].dataPoints[i].label, y: yPercent});
+        }
+        chart.addTo("data",{type:"line", yValueFormatString: "#.####", dataPoints: dps});
+        chart.data[1].set("axisYType", "secondary");
+        chart.axisY[0].set("maximum", yTotal);
+        chart.axisY2[0].set("maximum", 100);
+    }
+    
+       
+        
+    $("#click-submit").click(function(){
+        var val = $('#test').val();
+        var currency = $('#dp').val();
+        $.ajax({
+            dataType: "json",
+            url: 'https://api.fixer.io/latest',
+            data: {base: currency},
+            success: function(data){
+                  $('#test1').val(val * data.rates.INR);
+                   var chart = new CanvasJS.Chart("chartContainer",{
+            title:{
+                text: "FOREX RATES ON 2000"
+            },
+            axisY: {
+		title: "Currency Value",                   
+            },
+            
+            axisY2: {
+                title: "Percent",
+            },
+            data: [
+            {
+            type: "column",
+            dataPoints: [
+            { label: "AUD", y: parseFloat($('#cur1').val()) },
+            { label: "CAD", y: parseFloat($('#cur2').val()) },
+            { label: "CHF", y: parseFloat($('#cur3').val()) },
+            { label: "CNY", y: parseFloat($('#cur4').val()) },
+            { label: "CZK", y: parseFloat($('#cur5').val()) },                      
+            { label: "DKK", y: parseFloat($('#cur6').val()) },
+            ]
+            }
+            ]
+            
+            
+        });
+        
+                  chart.render();
+                  createPareto(chart); 
+                  
+    
+  }
+});
+
+});
+    });
+
+    
+    </script>
+    
+    
+    <!--</head>-->
+<!--
+
+    <body>
+        <div><input type="text" id="test"/>
+            <input type="hidden"  id="cur1"/>
+<input type="hidden" id="cur2"/>
+<input type="hidden" id="cur3"/>
+<input type="hidden" id="cur4"/>
+<input type="hidden" id="cur5"/>
+<input type="hidden" id="cur6"/></div>
+
+        <select id="dp" >
+        </select>
+<input type="submit" id="click-submit" value="submit"/>
+<div><p>This is equivalent to  = </p><input type="text" id="test1"/>INR</div>
+	<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+</span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+-->
+
+<!--<button id="myBtn">Open Modal</button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   
+<h2>Popup</h2>
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">
+              <script src="jquery-2.1.4.min.js"></script>
+        	<script src="canvasjs.min.js"></script>
+<script src="jquery.canvasjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script >
+
+            
+    $(document).ready(function() {
+        $.ajax({
+        dataType: "json",
+        url: 'https://api.fixer.io/latest',
+        data: {base: 'INR'},
+        success: function(data){
+            $('#cur1').val(parseFloat(data.rates.AUD));
+                  $('#cur2').val(parseFloat(data.rates.CAD));
+                  $('#cur3').val(parseFloat(data.rates.CHF));
+                  $('#cur4').val(parseFloat(data.rates.CNY));
+                  $('#cur5').val(parseFloat(data.rates.CZK));
+                  $('#cur6').val(parseFloat(data.rates.DKK));
+            $.each(data.rates, function(index, item) {
+              var div_data = "<option value=" + index + ">" + index + "</option>";
+              $(div_data).appendTo('#dp');
+
+
+                      });
+
+            }
+        });
+
+    function createPareto(chart){
+        var dps = [];
+        var yValue, yTotal = 0, yPercent = 0;
+
+        for(var i = 0; i < chart.data[0].dataPoints.length; i++)
+        yTotal += chart.data[0].dataPoints[i].y;
+
+        for(var i = 0; i < chart.data[0].dataPoints.length; i++){
+        yValue = chart.data[0].dataPoints[i].y;
+        yPercent += (yValue / yTotal * 100);
+        dps.push({label: chart.data[0].dataPoints[i].label, y: yPercent});
+        }
+        chart.addTo("data",{type:"line", yValueFormatString: "#.####", dataPoints: dps});
+        chart.data[1].set("axisYType", "secondary");
+        chart.axisY[0].set("maximum", yTotal);
+        chart.axisY2[0].set("maximum", 100);
+    }
+    
+       
+        
+    $("#click-submit").click(function(){
+        var val = $('#test').val();
+        var currency = $('#dp').val();
+        $.ajax({
+            dataType: "json",
+            url: 'https://api.fixer.io/latest',
+            data: {base: currency},
+            success: function(data){
+                  $('#test1').val(val * data.rates.INR);
+                   var chart = new CanvasJS.Chart("chartContainer",{
+            title:{
+                text: "FOREX RATES ON 2000"
+            },
+            axisY: {
+		title: "Currency Value",                   
+            },
+            
+            axisY2: {
+                title: "Percent",
+            },
+            data: [
+            {
+            type: "column",
+            dataPoints: [
+            { label: "AUD", y: parseFloat($('#cur1').val()) },
+            { label: "CAD", y: parseFloat($('#cur2').val()) },
+            { label: "CHF", y: parseFloat($('#cur3').val()) },
+            { label: "CNY", y: parseFloat($('#cur4').val()) },
+            { label: "CZK", y: parseFloat($('#cur5').val()) },                      
+            { label: "DKK", y: parseFloat($('#cur6').val()) },
+            ]
+            }
+            ]
+            
+            
+        });
+        
+                  chart.render();
+                  createPareto(chart); 
+                  
+    
+  }
+});
+
+});
+    });
+
+    
+    </script>
+    
+    
+    <!--</head>-->
+    <body>
+        <div><input type="text" id="test"/>
+            <input type="hidden"  id="cur1"/>
+<input type="hidden" id="cur2"/>
+<input type="hidden" id="cur3"/>
+<input type="hidden" id="cur4"/>
+<input type="hidden" id="cur5"/>
+<input type="hidden" id="cur6"/></div>
+<!--        -->
+        <select id="dp" >
+        </select>
+<input type="submit" id="click-submit" value="submit"/>
+<div><p>This is equivalent to  = </p><input type="text" id="test1"/>INR</div>
+	<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+</span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<!-- End of Forex Chart 2 head @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+   <div class="space"></div>
+ <!------ footer------>
+
+    <footer>
+    <section>
+        <h3><b>Perfect Forgings</b></h3>
+        <p><b>+91 161 2510441</b><br><br>
+        Road Opp. Dhandari Rly. Station<br>
+        Dhandari Kalan, Ludhiana-141014<br>
+               Punjab, INDIA<br>
+        info@perfectforgings.com</p>
+        </section>
+    <section>
+        <img src="/lg.png">
+        </section>
+    <section>
+        <h3>Connect With Us!</h3>
+        <ul class="social">
+            <li><a href="#"><img src="/facebook.png"></a></li>
+            <li><a href="#"><img src="/twitter%20copy.png"></a></li>
+            <li><a href="#"><img src="/linkedin%20copy.png"></a></li>
+        </ul>
+            </section>    
+    </footer>
+    <footer class="second">
+        <p>@Copyright - PerfectForgings 2017</p>
+
+    </footer>
+ <!------end footer------>
+
+        
+        
+        
+
+
+
+</body>
+
+</html>
+
+
+<!--<body style="text-align:center">-->
+
+<!--</body>-->

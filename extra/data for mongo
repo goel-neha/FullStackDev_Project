@@ -1,0 +1,229 @@
+
+// Tool.create({
+//     company_name: "Hyperkitten",
+//     company_logo:"11.jpg",
+//     company_url:"http://www.hyperkitten.com/",
+//     company_country:"USA",
+//     company_profile:"This site is dedicated to vintage tools and woodworking. I sell vintage woodworking hand tools over on my Tools for Sale web page. I also have information on the Harvey W. Peace company, Stanley Planes, and many vintage tool-related advertisments on my Resources page.",
+//         name:"3.4 Amp Corded 1/2 in. Sheet 4.5 in. Orbital Sander Kit with Vibration Control",
+//         image: "Sander4a.jpg",
+//         category:"Machine Tools",
+//         price: 312.00,
+//         description:"The Bosch OS50VC features a Powerful 3.4 Amp motor and Variable-Speed Dial to match speed to task (8,000-11,000 OPMs). Vibration Control Bosch-exclusive suspension system minimizes vibration for superior handling and maximum comfort. Sheet Loc Supreme Sandpaper Attachment System - Pulls regular sandpaper flat and tight. Also accepts stick-on paper. Multiple ergonomic soft-grip locations help prevent hand fatigue. Rugged die-cast aluminum gear housing Long-life design eliminates wobble and vibration. High-performance Soft Microcellular Backing Pad conforms too many contours."
+// });
+
+
+// var newCompany=new Company({
+//      company_name: "Hyperkitten",
+//     company_logo:"11.jpg",
+//     company_url:"http://www.hyperkitten.com/",
+//     company_country:"USA",
+//     company_profile:"This site is dedicated to vintage tools and woodworking. I sell vintage woodworking hand tools over on my Tools for Sale web page. I also have information on the Harvey W. Peace company, Stanley Planes, and many vintage tool-related advertisments on my Resources page."
+// });
+
+// newCompany.tools.push({
+//         name:"3.4 Amp Corded 1/2 in. Sheet 4.5 in. Orbital Sander Kit with Vibration Control",
+//         image: "Sander4a.jpg",
+//         category:"Machine Tools",
+//         price: 312.00,
+//         description:"The Bosch OS50VC features a Powerful 3.4 Amp motor and Variable-Speed Dial to match speed to task (8,000-11,000 OPMs). Vibration Control Bosch-exclusive suspension system minimizes vibration for superior handling and maximum comfort. Sheet Loc Supreme Sandpaper Attachment System - Pulls regular sandpaper flat and tight. Also accepts stick-on paper. Multiple ergonomic soft-grip locations help prevent hand fatigue. Rugged die-cast aluminum gear housing Long-life design eliminates wobble and vibration. High-performance Soft Microcellular Backing Pad conforms too many contours."
+  
+// });
+
+// newCompany.save(function(err,company){
+//   if (err){
+//       console.log(err);
+//   } else {
+//       console.log(company);
+//   } 
+// });
+
+// ToolMachine.create({
+//     name:"1/2 in. Super Hawg Drill",
+//     company:"Blue point tools",
+//     category:"Machine Tools",
+//     image: "Drill1b.jpg",
+//     price: 349.00,
+//     description:"Setting the standard for power and speed. The Milwaukee 1/2 in. Super Hawg is great for drilling holes of all sizes in wood frame construction. The 2-speed, adjustable, Milwaukee-built motor has a high operating speed, with an easy-turn gear shift knob and a clutch in the low gear range. You'll get maximum versatility and comfort with the soft-grip Roto-Lok handle, which shifts between 3 positions and the front T-bar handle on the gear case."
+// });
+
+// Tool.create({
+//     name:"Hickory Handle, Maximum Strike with this Craftsman Ball Pein",
+//     category:"Hand Tools",
+//     image: "Hammer1a.jpg",
+//     price: 16.09,
+//     description:"Make the most of your metalwork with this handy and durably Craftsman 16-ounce ball. This hammer is the ideal tool for a variety of common metalwork tasks, like striking punches and chisels, shaping unhardened metal, and peining rivets.This Craftsman ballpein is just as well-made as it is useful. The hammer features a steel hemispherical head - perfect for metal work - which has been heat-treated for drop-forged strength and durability. The hammer features 13-3/4 in. hickory handle, and the hammer face and pein are machined for uniformity. The hammer is lightweight at 1.3 pounds with a 16-ounce head weight, so it is light enough for anyone to handle, while still allowing you to wield force when you need to while working on your metal work tasks.",
+// });
+// Tool.create({
+//     name:"Craftsman Mallet Set",
+//     category:"Hand Tools",
+//     image: "Hammer2b.jpg",
+//     price: 39.99,
+//     description:"The Craftsman 3 pc. mallet set with replacement tips will come to your aid when you are looking for that custom tool for delicate and rough jobs. The 12 oz. plastic-tip, 16 oz. solid-rubber head, and 24 oz. rubber tip mallets give you versatility in material, weight and design.The 12 and 24 oz. mallets of the Craftsman mallet set come with two replaceable tips each. The 12 oz. has a replacement for the soft red tip and the hard yellow tip. The 24 oz. mallet has replacements for the black and white rubber tips. The 16 oz. solid rubber mallet does not come with a replacement. Each mallet has a wooden handle for a comfortable and easy grip."
+//    company:..
+// });
+
+// Tool.create({
+//     name:"Craftsman® Extreme GRIP™ Screwdriver Set",
+//     category:"Hand Tools",
+//     image: "Screw1a.jpg",
+//     price: 39.99,
+//     description:"The Craftsman® Extreme GRIP™ 6-piece Diamond Tip Screwdriver Set features uniquely coated screwdrivers that provide the best friction between screwdriver tips and fasteners.  This feature offers up to four times more gripping power than the standard black oxide finished tip screwdrivers.  Diamond coated tips reduce slippage and aids in removing stripped screws.  Easy to read laser marked shanks allow you to easily find which size you need.  Dual material, ergonomic handles provide comfortable grip and torque for users. Screwdrivers are organized in double-blister packaging and include the following sizes:  3/16' x 3' slotted, 1/4' x 4' slotted, 5/16' x 6' slotted, #1 x 3' phillips, #2 x 4' phillips, #3 x 6 phillips.  This screwdriver set is backed by the Craftsman Hand Tool Full Warranty."
+// });
+
+
+// Tool.create({
+//     name:"1/2 in. Super Hawg Drill",
+//     company_name: "Blue point tools",
+//     company_logo:"4.gif",
+//     company_url:"http://bluepointtool.com/",
+//     category:"Machine Tools",
+//     image: "Drill1b.jpg",
+//     price: 349.00,
+//     description:"Setting the standard for power and speed. The Milwaukee 1/2 in. Super Hawg is great for drilling holes of all sizes in wood frame construction. The 2-speed, adjustable, Milwaukee-built motor has a high operating speed, with an easy-turn gear shift knob and a clutch in the low gear range. You'll get maximum versatility and comfort with the soft-grip Roto-Lok handle, which shifts between 3 positions and the front T-bar handle on the gear case."
+// });
+
+// Tool.create({
+//     name:"DEG 500-D 11.5 Amp 5 in. Angle Grinder",
+//     image: "Grinder5a.jpg",
+//     category:"Machine Tools",
+//     price: 259.00,
+//     description:"The Hilti 5 in. Angle Grinder features an 11.5 Amp electric motor that can generate a maximum speed of 11,000 RPM for powerful grinding action. This grinder's low-profile gear case allows for excellent access to tight areas while its lightweight, slim and easy-to-use rat tail design enable great control and portability. The Active Torque Control feature helps minimize kickback for operator protection.",
+//     company_name: "Makita",
+//     company_logo:"10.png",
+//     company_url:"https://www.makitatools.com/",
+//      company_country:"USA",
+//     company_profile:"Makita Corporation of America is located in Buford, Georgia. As a part of our global network of ten manufacturing and assembly plants, Buford is one source of Makita products used on jobsites around the world. Our product development team works closely with engineers on jobsites to develop products that exceed the demands of the American contractor. Buford, Georgia is also the site of the Makita University, a hands-on educational experience where customers learn the latest technologies, products and applications."
+// });
+
+// Tool.create ({ name: "12-Volt Cordless Lithium-Ion Drill/Driver Kit", category: "Machine Tools", image: "Drill4a.jpg" , price: 49.97, description: "The Ryobi 12-Volt Cordless Lithium-Ion Drill/Driver Kit gives you optimal performance in a compact size. The battery holds a charge four times as long and weighs 33% less than comparable Ni-Cad batteries, while the tool's compact size makes it easy to handle and perfect for tight spaces. With the included battery and a quick 45 minute recharge time, you'll always have the power to complete your home improvement needs.", company_name:  "Bosch hand tools", company_logo: "2.jpeg", company_url: "https://www.boschtools.com/us/en/", company_description: "Quality hand tools", company_country: "Canada", company_profile: "Welcome to Bosch Blue. This is the website of the professional blue power tools from Bosch – for trade and industry professionals. The Power Tools Division of the Bosch Group is the world market leader for power tools and power tool accessories. The core success factors are innovative strength and pace of innovation. As a professional, a lot is expected of you: speed, reliability, competence, endurance – in short: excellent results. So isn't it only fair to demand the same from your power tools? The professional blue power tools from Bosch are engineered for excellence – meeting the highest standards in speed, precision and robustness for great, professional work results. Professional blue power tools from Bosch – For professionals from professionals."});;
+
+
+Tool.create({
+    company_name: "H and S Tools",
+    company_logo:"3.png",
+    company_url:"http://www.hstool.com/",
+    company_country:"USA",
+    company_profile:"We envision a world where all people who do maintenance, repair, or manufacturing work optimize their performance, efficiency, and safety by using portable machining equipment.To help our customers do their work better, faster, safer, and more cost effectively by bringing the most innovative, highest-quality portable machining equipment right to the job! Deliver an outrageously good customer experience – every interaction, everywhere, every time! And to have fun doing it!",
+        name:"7.5 Amp Corded 1 in. SDS-Plus Bulldog Xtreme Variable Speed Rotary Hammer with Auxiliary Handle and Carrying Case",
+        image: "Drill1b.jpg",
+        category:"Machine Tools",
+        price: 179.99,
+        description:"Get a fast, long-lasting rotary hammer with the Bosch BullDog Extreme 1 in. Rotary Hammer. It features a multi-function selector that quickly shifts between rotation-only, rotary hammer and hammer-only modes for optimal versatility. It also has a variable-speed reversing trigger for accurate bit starts and simple removal of fasteners and bound bits."
+});
+Tool.create({
+    company_name: "Park Tools",
+    company_logo:"5.jpg",
+    company_url:"http://www.parktool.com/",
+    company_country:"USA",
+    company_profile:"In April of 2013 we celebrated our 50th anniversary and moved into our fourth location, an 80,000 square foot facility built specifically for us. We're doing more manufacturing in-house than ever and our plans include expanding to do even more ourselves. The new facility also includes a photo and video studio so we can expand our web repair help articles and how-to videos. We're poised and ready for the next 50 years! Howard and Art never imagined in 1963 that Park Tool Company would grow to what it is today, but we will not take our spot at the top for granted. Our pledge for the future is simple: Build the best tools. Our commitment to that principle is stronger than ever. We build bicycle tools and maintenance equipment, it's all we do and we're good at it. Thank you for choosing Park Tool. We're honored to make tools for you.",
+        name:"Long Neck Angle Grinder LHW/E with Storage Case",
+        image: "Grinder7a.jpg",
+        category:"Machine Tools",
+        price: 152.63,
+        description:"The Proxxon Longneck Angle Grinder LHW/E is light, compact, and user-friendly. Useful for grinding, deburring, roughing, and finishing. It is also great for paint and rust removal, cutting small components and sharpening tools."
+});
+Tool.create({
+    company_name: "Delta Tools",
+    company_logo:"6.png",
+    company_url:"http://www.deltamachinery.com/",
+    company_country:"USA",
+    company_profile:"After nearly 90 years of expertise in the woodworking business, DELTA Power Equipment Corporation (DELTA PEC) has become one of the most revered brands in woodworking tools today. DELTA Machinery focuses on innovations to help the woodworker create masterpieces easier and with more precision. The company designs, manufactures and distributes a variety of stationary woodworking tools including electric table saws, band saws, radial arm saws, scroll saws, drilling machines, jointers, planers, mortisers, lathes, grinders and dust collectors for the professional and advanced woodworking markets.",   
+        name:"3 in. x 18 in. Portable Belt Sander",
+        image: "Sanders2a.jpg",
+        category:"Machine Tools",
+        price: 49.97,
+        description:"The Ryobi 3 in. x 18 in. Belt Sander features a powerful 6-Amp motor that delivers the power and performance to take on most heavy duty jobs. With a new and improved low profile design this belt sander is very compact and able to reach into tight spaces. This includes a BE319 belt sander, dust bag, sanding belt and Operator's Manual."
+        
+    
+});
+
+
+-------------------------Hand Tools-----------------------------------
+
+Tool.create({
+     name:"Craftsman Hand Driller Hammer ",
+        image: "Hammer4a.jpg",
+        category:"Hand Tools",
+        price: 25.99,
+        description:"Put those chisels to work with the Craftsman Hand Driller Hammer. This steel hand driller has a drop-forged steel head and handle with a Power Plug shock absorbing core to reduce vibration and shock transfer.The oversized striking face is idea for using on star drills, cold chisels, brick chisels and punches. Got some detailing to do on that metal project? Need precision for that car part? This Craftsman hand driller can handle the job without tiring you out."
+});
+
+Tool.create({
+     name:"Craftsman Magnetizer, Magnet, and Demagnetizer",
+        image: "Screw2a.jpg",
+        category:"Hand Tools",
+        price: 4.99,
+        description:"Create a magnetized screwdriver with Craftsman’s Magnetizer, Magnet, and Demagnetizer. This extremely handy tool can turn any steel blade into a magnet or take magnetic properties away. The small tool size has a large impact on how your tools operate. Whether you’re a professional building mechanic or occasional do-it-yourselfer this tool allows you to gain a better grip on all metal hardware ensuring you won’t drop it at the last second or be forced to position a screw with your hand before fastening in tight areas."
+});
+
+Tool.create({
+     name:"Milwaukee Precision Screwdrivers",
+        image: "Screw5a.jpg",
+        category:"Hand Tools",
+        price: 14.97,
+        description:" Precision machined tips provide secure fitment and long life. The extended reach design and longer shanks deliver improved visibility and reach. 360° rotating back caps offer greater control, driving ability, and tuning. Additionally, color coded markings allow users to easily ID tool on the jobsite. Chrome plated shanks increase tool life by reducing corrosion and providing superior rust protection."
+});
+
+Tool.create({
+     name:"The Crescent 2-Piece Adjustable Wrench Set",
+        image: "Wrench3a.jpg",
+        category:"Hand Tools",
+        price: 18.99,
+        description:" The dual-pawl technology on the Husky 100-Position Double Ratcheting Metric Wrench Set provides access to engage fasteners where other wrenches can't with its ultra-narrow, 3.6-degree arch swing box-end. Its 10% longer beam provides increased reach for accessing hard-to-reach fasteners and improves overall leverage. The innovative open-end ratcheting design improves the speed of ratcheting and allows access of an open-end without ever removing the wrench from the fastener."
+});
+
+Tool.create({
+     name:"100-Position Double Ratcheting Wrench Set, Metric (6-Pieces)",
+        image: "Wrench6b.jpg",
+        category:"Hand Tools",
+        price: 39.97,
+        description:" features tools with wide-capacity jaws to accommodate a variety of fastener sizes. The set includes a 6 in. wrench and a 10 in. wrench, each with a wide, nonslip cushion grip. The tension spring stabilizes the jaws and the knurls adjust easily."
+});
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+------------- Scaffoldings-----------------
+
+Tool.create({
+     name:"Baker Style 6 ft. x 6 ft. x 2 ft. Utility Scaffold 1100 lb. Load Capacity",
+        image: "Scaf1a.jpg",
+        category:"Scaffolding Tools",
+        price: 169.00,
+        description:"This MetalTech multipurpose maxi square baker-style rolling scaffold features an anti-slip plywood deck with steel reinforcement. Highest capacity in this category of 1,100 lbs. It adjusts from as low as 27 in. to as high as 76 in. in 2 in. increments. Constructed with rugged 1-1/2 in. square steel tubes with a baked-on yellow poly powder coat finish, 5 in. double locking caster wheels and a full hand grip spring-loaded double pronged locking mechanism. The 6 ft. baker style is the most popular scaffold in the industry and preferred by most professionals and homeowners."
+});
+
+Tool.create({
+     name:"Saferstack 5 ft. x 7 ft. x 5 ft. Mason Scaffold (Set of 4)",
+        image: "Scaf2b.jpg",
+        category:"Scaffolding Tools",
+        price: 262.00,
+        description:"This MetalTech Saferstack Scaffold (Set of 4) sections features a design that lets you connect multiple scaffold sets to gain a higher and wider reach. Stacking in 30% less space than regular frames, the Saferstack frames interlock for safer storage and transport, creating a secure scaffolding system. Constructed with a textured, anti-slip powder-coat finish, this weather-resistant set offers lasting durability to withstand tough jobsite conditions."
+});
+
+Tool.create({
+     name:"Job Site Series 4 ft. x 3-1/2 ft. x 1-3/4 ft. Scaffold 600 lb. Load Capacity ",
+        image: "Scaf3c.jpg",
+        category:"Scaffolding Tools",
+        price: 119.00,
+        description:"The MetalTech Job Site Series Scaffold offers a durable yet lightweight portable scaffolding solution for all your indoor painting and do-it-yourself projects. It features a 600 lb. load capacity, yet is lightweight and easy to transport and handle. When not in use, it folds down to only 4 in. in depth for convenient, compact storage. The scaffold contains two sets of blue anti-slip steel platforms for a multi-level working area that accommodates a wide range of jobs. With rugged, aircraft-grade aluminum tube frame construction, this set is secure and safe to set up and move using the 4 in. swivel casters with locking brakes and solid steel stems."
+});
+
+Tool.create({
+     name:"Job Site Series 4-3/4 ft. x 4 ft. x 2 ft. Scaffold 500 lb. Load Capacity  ",
+        image: "Scaf4c.jpg",
+        category:"Scaffolding Tools",
+        price: 145.59,
+        description:"You will absolutely love the 4 ft. MetalTech mini folding steel work platform and will quickly find that it is the perfect solution for all your indoor painting and do it yourself projects. It features a 500 lbs. load capacity, yet is lightweight, easy to transport and handle. When not in use, it folds down to only 3 in. in depth making it easy and convenient to store. The mini contains two sets of black anti slip platforms for a multi-level working area. Rugged 1-1/4 in. steel tube frame construction is secure and safe with 4 in. swivel casters with locking brakes and solid steel stem. The convenient tool shelf is designed to hold all your tools, screwdriver bits, both quart and gallon paint cans. It even has a paper towel or trash holder and will fold out of the way when your project is completed."
+});
+
+Tool.create({
+     name:"16 ft. x 7 ft. x 5 ft. Rolling Scaffold Tower 2000 lb. Load Capacity  ",
+        image: "Scaf7a.jpg",
+        category:"Scaffolding Tools",
+        price: 1239.00,
+        description:"The Fortress Rolling Scaffold Tower is designed for exterior or interior applications and built to endure years of everyday use on construction sites. The 5 ft. wide x 7 ft. long work platform provides 35 square ft. of stable, safe and comfortable work surface at a standing height of 15 ft. 8 in. Made for safety and easy operation, this unit features a state-of-the-art guard panel system and assembles in minutes with just two people. The 8 in. casters are made with industrial-grade, 2 in. wide solid rubber wheels with heavy-duty steel hubs and yokes. When the castors’ brakes are locked, the unit is prevented from rolling or swiveling. These rolling towers come standard with a squaring brace (diagonal) that provides stability and safety. For additional safety, a toeboard set (part # HD2725TS; sold separately) is available to install along the perimeter of the platforms. Additional scaffolding may be purchased and stacked onto this unit to increase the height by another 5 ft. Complete 6 ft., 11 ft. and 21 ft. high rolling tower packages are also available on Homedepot.com."
+});
+
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+

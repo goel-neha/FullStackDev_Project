@@ -1,0 +1,282 @@
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+ width: auto;
+ height: 360px;
+  position: relative;
+  /*margin: auto;*/
+  margin-top: 10%;
+
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.fade img
+ {
+    width: 100%;
+    height: 350px;
+
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin:2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+/*
+
+#slider {
+    display: block;
+    height: 350px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 95px;
+    position: relative;
+}
+
+#slider #slides {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider #slides > div {
+    list-style: none;
+    height: 100%;
+    width: 500%;
+    position: relative;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Set 3D perspective since we're using 3D transforms */
+  /*  transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective: 600px;
+    -webkit-perspective-origin: 10% 50%;
+    -moz-perspective-origin: 10% 50%;
+    perspective-origin: 10% 50%;
+}
+
+#slides > div > span {
+	/* Run the tranistions */
+/*	-webkit-transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	-moz-transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	-o-transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	transition: all 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+	height: 400px;
+	width: 10%;
+	float: left;
+	border-radius: 5px;
+	opacity: 1;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	font-size: 1.6em;
+	top: 20px;
+	z-index: 1;
+}
+
+/* Display none, so the user doesn't see whats happening with the radio buttons */
+/*#slider input[type=radio] {
+	display: none;
+}
+
+#slider #slides > div > span > img {
+    margin: auto;
+    height: 100%;
+}
+
+#slider .arrows {
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    top: 290px;
+    display: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+    width: 29px;
+	height: 25px;
+	border-radius: 32px;
+	text-align: center;
+	padding: 7px 0 0 3px;
+    background: black;
+    box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px 11px 24px -8px rgba(255,255,255,0.4);
+}
+
+#slider .arrows:hover {
+	box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px -11px 24px -8px rgba(255,255,255,0.4);
+}
+
+#slides .info {
+	width: 100%;
+	padding: 20px 20px 25px 20px;
+	position: relative;
+	bottom: 120px;
+	border-radius: 5px 5px 0 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: block;
+	-webkit-transition: all 1s 0.2s cubic-bezier(1, 0, 0.6, 1);
+	transition: all 1s 0.2s cubic-bezier(1, 0, 0.6, 1);
+	color: #fff;
+	font-weight: bold;
+	background-color: rgb(30, 30, 30);
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	line-height: 30px;
+}
+
+#slides .info strong {
+	border-bottom: 2px solid #fff;
+	padding: 3px 0;
+}
+
+#slides .info em {
+	font-size: 0.8em;
+	float: right;
+	padding-top: 4px;
+	color: rgba(255,255,255,0.2);
+}
+
+#button-1:checked ~ #arrow-2, #button-2:checked ~ #arrow-3, #button-3:checked ~ #arrow-4, #button-4:checked ~ #arrow-5 {
+    right: 27%;
+    display: block;
+}
+
+#button-2:checked ~ #arrow-1, #button-3:checked ~ #arrow-2, #button-4:checked ~ #arrow-3, #button-5:checked ~ #arrow-4 {
+	left: 27%;
+    display: block;
+    -webkit-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px -11px 24px -8px rgba(255,255,255,0.4);
+}
+
+#button-2:checked ~ #arrow-1:hover, #button-3:checked ~ #arrow-2:hover, #button-4:checked ~ #arrow-3:hover, #button-5:checked ~ #arrow-4:hover {
+    box-shadow: 0 0 20px rgba(200, 235, 248, 0.98), inset 0px 11px 24px -8px rgba(255,255,255,0.4);
+}
+
+#image-1 {
+	background: url('/t6.jpeg');
+}
+
+#image-2 {
+	background: url('/t2.jpeg');
+}
+
+#image-3 {
+	background: url('/t5.gif');
+}
+
+#image-4 {
+	background: url('/t3.png');
+}
+
+#image-5 {
+	background: url('/t4.jpg');
+}
+
+
+#slider #button-1:checked ~ #slides > div #image-2, #slider #button-1:checked ~ #slides > div #image-3,
+#slider #button-1:checked ~ #slides > div #image-4, #slider #button-1:checked ~ #slides > div #image-5,
+#slider #button-2:checked ~ #slides > div #image-3, #slider #button-2:checked ~ #slides > div #image-4,
+#slider #button-2:checked ~ #slides > div #image-5, #slider #button-3:checked ~ #slides > div #image-4,
+#slider #button-3:checked ~ #slides > div #image-5, #slider #button-4:checked ~ #slides > div #image-5 {
+	-webkit-transform: rotateY(-10deg) scale(0.8) translateX(-10%);
+	transform: rotateY(-10deg) scale(0.8) translateX(-10%);
+	z-index: 0;
+}
+
+#slider #button-2:checked ~ #slides > div #image-1, #slider #button-3:checked ~ #slides > div #image-2,
+#slider #button-3:checked ~ #slides > div #image-1, #slider #button-4:checked ~ #slides > div #image-3,
+#slider #button-4:checked ~ #slides > div #image-2, #slider #button-4:checked ~ #slides > div #image-1,
+#slider #button-5:checked ~ #slides > div #image-4, #slider #button-5:checked ~ #slides > div #image-3,
+#slider #button-5:checked ~ #slides > div #image-2, #slider #button-5:checked ~ #slides > div #image-1 {
+	-webkit-transform: rotateY(10deg) scale(0.8) translateX(10%);
+	transform: rotateY(10deg) scale(0.8) translateX(10%);
+	z-index: 0;
+}
+
+
+#slider #button-1:checked ~ #slides > div #image-1 .info,
+#slider #button-2:checked ~ #slides > div #image-2 .info,
+#slider #button-3:checked ~ #slides > div #image-3 .info,
+#slider #button-4:checked ~ #slides > div #image-4 .info,
+#slider #button-5:checked ~ #slides > div #image-5 .info {
+	bottom: 0px;
+}
+
+
+#slider #button-1:checked ~ #slides > div > span { left: 5% }
+
+#slider #button-2:checked ~ #slides > div > span { left: -5% }
+
+#slider #button-3:checked ~ #slides > div > span { left: -15% }
+
+#slider #button-4:checked ~ #slides > div > span { left: -25% }
+
+#slider #button-5:checked ~ #slides > div > span { left: -35% }
+
+*/

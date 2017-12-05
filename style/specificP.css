@@ -1,0 +1,303 @@
+
+.header1 {
+    position:fixed;
+	right: 0;
+	top: 0;
+	left: 0;
+    height:160px;
+    /*margin-top:138px;*/
+    width: 100%;
+    margin-bottom: 100;
+      /*  background-image:url(hd4.png);
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    */
+    color:white;
+    text-align: center;
+}
+#logo{
+            margin: 20px;
+            float: left;
+            width: 200px;
+            height: 60px;
+            background:no-repeat;
+            z-index: 5000;
+        }
+
+ /*/.bg{
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../../project/images/bg10.jpg);
+    background-position:bottom;
+}*/
+
+.menu{
+    position:fixed;
+    z-index: 4000;
+	right: 0;
+	top: 0;
+	left: 0;
+    background-color:#494949;
+    /*margin-top:60px;*/
+    padding-top: 30px;
+    padding-bottom:  0px;
+    height: 50px;
+    text-align:center;
+    color:white;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.menu a{
+    color:white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menu a:hover{
+    color:black;
+background-color:#dcebf2;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+body {
+    background-image: url(../../project/images/bg3.png);
+    /*background-image: url(bg10.jpg);*/
+
+        font-family: sans-serif;
+    font-size:13px;
+
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+.footer {
+	position:fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    margin-top: 100px;
+    height: 35px;
+    color: white;
+    padding-top: 20px;
+	background-color: #494949;
+	text-align: center;
+    font-family: sans-serif;
+
+}
+
+.categorieslinks{
+    position: relative;
+
+padding-top: 15px;
+    padding-bottom: 15px;
+    width:30%;
+    height: 100px;
+    background: rgba(238, 238, 238, 0.5);
+    margin-left: 10px;
+}
+
+.categorieslinks a{
+    color: darkblue;
+}
+
+.categorieslinks a:hover{
+    color: #dcebf2;
+}
+
+.imgstyle{
+position: fixed;
+    z-index: 5000;
+top: 0;
+left:0;
+width: 200px;
+height:50px;
+margin-bottom: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+.space{
+
+  margin-top: 150px;
+}
+/* h1 Added by Maria for the Simple product page */
+h1{
+font-family: sans-serif;
+font-size: 1.5em;
+color:#494949;
+font-weight: bold;}
+
+h2,h3{
+    font-family:sans-serif;
+   /* color:#454F8C;*/
+    color:gainsboro;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.container.main{
+    margin-top: 7.0em;
+}
+
+/* .container Added by Maria for the Simple product page */
+.container{
+
+    width: 60%;
+
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-right:5%;
+    padding-bottom: 5%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    background-color: #999999;
+    overflow: scoll;
+    background: rgba(238, 238, 238, 0.8);
+
+
+}
+
+/* .content-container Added by Maria for the Simple product page */
+.content-container {
+
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-top: 22%;
+    opacity: 1;
+}
+
+/* div.gallery Added by Maria for the Simple product page */
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 20%;
+    padding-left: 10;
+    opacity: none;
+
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+
+}
+
+/* reviewcontainer Added by Maria for the Simple product page */
+#reviewcontainer{
+
+    width: 60%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-right:5%;
+    padding-bottom: 5%;
+    margin:auto;
+    margin-bottom: 15%;
+    margin-top:1%;
+    background-color: #999999;
+    overflow: scoll;
+    background: rgba(238, 238, 238, 0.8);
+    font-family: sans-serif;
+    font-size: 14px;
+
+}
+
+
+div.order{
+    margin-bottom: 1px;
+    width:40%;
+    margin-left: 60%;
+}
+div.panel {
+    padding: 0 18px;
+    display: none;
+    margin-bottom: 3px;
+}
+
+.space{
+    /*width:100%;*/
+    margin-top:2px;
+}
+
+.space1{
+    /*width:100%;*/
+    margin-top:20px;
+}
+
+.comp_logo{
+    width: 100px;
+    height:100px;
+}
+
+input {
+    background-color: #fff;
+    color: #2984b4;
+    border: 1px solid #2984b4; 
+ 
+   font-size: 14px;
+    margin: 2px;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 5px;
+    
+
+}
+input.enter {
+     padding: 5px 12px;
+     text-align: center;
+
+
+}
+
+input:hover {
+    background-color: #2984b4;
+    color: white;}
+    
+a.link {
+    float:right;
+    font-size:14px;
+    margin-right:20px;
+    margin-top:2px;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.acc{
+   background-color: #fff;
+    color: #2984b4;
+    border: 1px solid #2984b4;
+   font-size: 14px;
+    margin: 2px;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 5px; 
+}
+ .acc:hover   {
+    background-color: #2984b4;
+    color: white;} 
+

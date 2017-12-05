@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Perfect Group of Companies   </title>
+
+    <link rel="stylesheet" href="/home.css"/>
+    <link rel="stylesheet" href="/Product_Company_tab.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    
+</head>
+
+<body> 
+
+<!------ Header------>
+<header>
+        <a href="/" id="logo"><img src="/lg.png"></a>
+        <nav>
+        <a href="#" id="menu-icon"></a>
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="#" class="current">Partners</a></li>
+            </ul>
+        </nav>
+    </header>
+<!------end Header------>
+
+
+<!-----division tab----->
+<script type="text/jscript" src="/Verticaltab.js"></script>
+    
+<div class="TabGrid">
+    <div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'partners')" id="defaultOpen">Our Partners</button>
+  <button class="tablinks" onclick="openTab(event, 'becomePartner')">Become a Partner</button>
+</div>
+
+<!-----Partner tab Content----->
+<div id="partners" class="tabcontent" style="display:block">
+  <h3 style="padding-top:20px">All Partners</h3>
+  <div class="ui main text container">
+     <div class="ui top attached segment">
+         <div class="ui divided items">
+             <% tools.forEach(function(tool){ %>
+              <div class="item">
+                  <div class="image">
+                    <img src="<%= tool.company_logo%>">
+                  </div>
+                  <div class="content">
+                   <a class="header" href="<%=tool.company_url %>"><%= tool.company_name %></a>
+                   <div class="description">
+                     <p><%= tool.company_country %></p> 
+                   </div>
+                    <div class="extra">
+                      <a class="ui floated basic blue button" href="/company/<%=tool._id %>">
+                          More ...
+                          <i class="right chevron icon"></i>
+                      </a>
+                    </div>
+                   </div>
+              </div>
+            <% }) %>
+         </div>
+     </div>
+  </div>
+  </div>
+
+<!-----End Partner tab Content----->
+
+
+<!-----become a partner tab Content----->
+<div id="becomePartner" class="tabcontent">
+  <h3 style="padding-top:20px"> please Fill the Form bellow</h3>
+      <div class="ui main text container">
+
+     <div class="ui top attached segment">
+        <html>
+    <head>
+        <title> company  </title>
+        <link rel="stylesheets" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    </head>
+    <body>
+
+    <form class="ui form" action="/companySubmitting" method="post">
+ <div class="field">
+     <label>Company Name</label>
+     <input type="text" name="tool[company_name]" placeholder="company name">
+ </div>
+ <div class="field">
+     <label>Company logo</label>
+    <input type="text" name="tool[company_logo]"placeholder="company logo URL">
+ </div>
+ <div class="field">
+     <label>Company URL</label>
+    <input type="text" name="tool[company_url]"placeholder="company URL">
+ </div>
+ <div class="field">
+     <label>Country</label>
+    <input type="text" name="tool[company_country]"placeholder="country">
+ </div>
+  <div class="field">
+     <label>Company Profile</label>
+    <textarea name="tool[company_profile]"></textarea>
+ </div>
+ 
+    <input class="ui floated basic blue button" type="submit" text="Add ">
+    <input class="ui floated basic blue button" type="reset"  text="Cancel">
+</form>
+    
+<br>
+
+
+
+
+  </body>
+</html>
+         </div>
+     </div>
+  </div>
+  
+  </div>
+
+
+<!----- End become a partner tab Content----->
+
+
+
+
+
+<!------ footer------>
+
+    <footer>
+    <section>
+        <h3><b>Perfect Forgings</b></h3>
+        <p><b>+91 161 2510441</b><br><br>
+        Road Opp. Dhandari Rly. Station<br>
+        Dhandari Kalan, Ludhiana-141014<br>
+               Punjab, INDIA<br>
+        info@perfectforgings.com</p>
+        </section>
+    <section>
+        <img src="/lg.png">
+        </section>
+    <section>
+        <h3>Connect With Us!</h3>
+        <ul class="social">
+            <li><a href="#"><img src="/facebook.png"></a></li>
+            <li><a href="#"><img src="/twitter%20copy.png"></a></li>
+            <li><a href="#"><img src="/linkedin%20copy.png"></a></li>
+        </ul>
+            </section>    
+    </footer>
+    <footer class="second">
+        <p>@Copyright - PerfectForgings 2017</p>
+
+    </footer>
+ <!------end footer------>
+
+    </body>
+</html>
+
+
+
+ 
